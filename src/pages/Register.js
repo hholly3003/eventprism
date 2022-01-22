@@ -1,7 +1,7 @@
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import React, {useRef} from 'react';
 import Signin from '../components/Login'
-import auth from '../utils/firebase'
+import {auth} from '../utils/firebase'
 import db from '../utils/firebase'
 import { doc , setDoc } from 'firebase/firestore'
 
@@ -12,26 +12,27 @@ function Register() {
 
     // Create a function that registers the new user
     const register = async ()=>{
-        try {
+        try 
+        {
             await createUserWithEmailAndPassword(auth, emailRef.current.value, passwordRef.current.value)
+
             // Maybe create an api call to firestore for adding data into database, users collection
-            .then(async(cred)=>{
+            .then(async (cred)=>{
                 // Create a document for the user using the credential
-                console.log(cred)
-                await setDoc(doc(db,"users",`${cred.user.uid}`),{
+                await setDoc(doc(db,"users",`${cred.user.uid}`),
+                {
                     //Pass in the payload
                     events: [
-                        {
-                            name : "EVENT 11111"
-                        }
+                      {
+                        name: "This is a dummy event"  
+                      },
                     ]
                 })
-
-                //When there is a user, send to dashboard route
+                // When there is a user, send to dashboard route
                 if(cred){
-                    window.location = "/dashboard"
+                    window.location = "/dashboard";
                 }
-            })
+            });
         }
         catch(error){
             alert(error.message)
