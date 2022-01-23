@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import Signin from '../components/Login'
 import { signInWithEmailAndPassword }from 'firebase/auth'
 import { auth } from '../utils/firebase'
@@ -6,6 +6,8 @@ import { auth } from '../utils/firebase'
 function Login() {
     const emailRef = useRef()
     const passwordRef = useRef()
+
+    const [user, setUser] = useState({})
     
 
     const login = async ()=>{
