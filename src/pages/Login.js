@@ -31,7 +31,7 @@ function Login() {
         headerStatement = "Need an account?"
         emailInput = {emailRef}
         passwordInput = {passwordRef}
-        btnFunction = ""
+        btnFunction = {login}
       />
   </div>;
 }
