@@ -6,12 +6,18 @@ import Event from "../components/Event";
 import EventsList from "../components/EventsList";
 import HomeBar from "../components/Homebar";
 import '../styles/Dashboard.css'
+import { signOut } from "firebase/auth";
 // import UserInput from "..components/UserInput";
 
 function Dashboard({ events }) {
   const [user, setUser] = useState({});
   const [filteredEvents, setFilteredEvents] = useState("all");
 
+  const logout = async ()=>{
+    await signOut(auth)
+    window.location = "/"
+  }
+  
   //getting the object only of the active user or user who is signed in
   useEffect(() => {
     // Authenticate the user and only user who has signed in can access dashboard
@@ -34,6 +40,7 @@ function Dashboard({ events }) {
       [filteredEvents]
     );
   });
+
   return (
     <div className="dashboard">
       <HomeBar />
