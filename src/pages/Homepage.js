@@ -5,9 +5,11 @@ import HomeBar from '../components/Homebar';
 function Homepage() {
   return (
     <div>
-      <Container>
-        <HomeBar></HomeBar>
-      </Container>
+      <HomeBar
+        text="Login"
+        href="/login"
+      />
+
     </div>
   );
 }

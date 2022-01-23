@@ -1,7 +1,7 @@
 import { onSnapshot, doc } from "firebase/firestore";
 import React, { useState, useEffect } from "react";
 import db, { auth } from "../utils/firebase";
-import styled from "styled-components";
+// import styled from "styled-components";
 import Event from "../components/Event";
 import EventsList from "../components/EventsList";
 import HomeBar from "../components/Homebar";
@@ -24,7 +24,11 @@ function Dashboard({ events }) {
     auth.onAuthStateChanged((currentUser) => {
       if (currentUser.uid) {
         setUser(currentUser.uid);
-      } else {
+      } else if (!currentUser){
+        window.location = "/login"
+      } 
+      
+      else {
         alert.message("Please sign in");
       }
     });
@@ -43,10 +47,13 @@ function Dashboard({ events }) {
 
   return (
     <div className="dashboard">
-      <HomeBar />
+      <HomeBar 
+        text="Logout"
+        href="/"
+      />
       <EventsList />
-
     </div>
+    
   );
 }
 
