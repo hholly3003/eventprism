@@ -6,12 +6,10 @@ import { auth } from "../utils/firebase";
 function Login() {
   const emailRef = useRef();
   const passwordRef = useRef();
-
-  const [user, setUser] = useState({});
-
   const [user, setUser] = useState({});
 
   const login = async () => {
+    // Find out how to limit only for authenticated user who can access dashboard.
     try {
       await signInWithEmailAndPassword(
         auth,
@@ -20,6 +18,8 @@ function Login() {
       ).then(() => {
         if (user) {
           window.location = "/dashboard";
+        } else {
+          alert.message("Please sign in first");
         }
       });
     } catch (error) {
