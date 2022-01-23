@@ -1,5 +1,5 @@
 import "./App.css";
-import HomeBar from "./components/HomeBar";
+import HomeBar from "./components/Homebar";
 import EventsList from "./components/EventsList";
 
 function App() {
