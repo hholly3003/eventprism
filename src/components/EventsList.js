@@ -55,7 +55,7 @@ function EventsList({name}) {
     )
 }
 
-export default EventsList
+export default EventsList;
 
 // await fetch(`https://api.seatgeek.com/2/events?&venue.state=NY&client_id=MjUzNzU2NTF8MTY0MjI5NTUyNi40ODgzNzgz&per_page=100&format=json`)
 //         .then((response) => response.json())

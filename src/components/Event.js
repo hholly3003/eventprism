@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-function Events({title, image, date, months, score, lowest_price}) {
+function Event({title, image, date, months, score, lowest_price}) {
     return (
         <div className='events'>
             <div className='events-container'>
@@ -25,4 +25,4 @@ function Events({title, image, date, months, score, lowest_price}) {
     )
 }
 
-export default Events
+export default Event;

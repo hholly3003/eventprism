@@ -1,4 +1,6 @@
-import React from 'react';
+import React from "react";
+// import { doc, setDoc } from "firebase/firestore";
+// import db from "../utils/firebase";
 
 function UserInput({setType, typeRef}) {
   return (
