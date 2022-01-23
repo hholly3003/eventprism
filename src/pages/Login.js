@@ -9,6 +9,8 @@ function Login() {
 
   const [user, setUser] = useState({});
 
+  const [user, setUser] = useState({});
+
   const login = async () => {
     try {
       await signInWithEmailAndPassword(
