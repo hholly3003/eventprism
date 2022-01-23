@@ -1,39 +1,43 @@
-import React, { useRef } from 'react';
-import Signin from '../components/Login'
-import { signInWithEmailAndPassword }from 'firebase/auth'
-import { auth } from '../utils/firebase'
+import React, { useRef, useState } from "react";
+import Signin from "../components/Login";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../utils/firebase";
 
 function Login() {
-    const emailRef = useRef()
-    const passwordRef = useRef()
-    
+  const emailRef = useRef();
+  const passwordRef = useRef();
 
-    const login = async ()=>{
-        try{
-            await signInWithEmailAndPassword(auth, emailRef.current.value, passwordRef.current.value)
-            .then(()=>{
-                if(user){
-                    window.location = "/dashboard"
-                }
+  const [user, setUser] = useState({});
 
-            })
+  const login = async () => {
+    try {
+      await signInWithEmailAndPassword(
+        auth,
+        emailRef.current.value,
+        passwordRef.current.value
+      ).then(() => {
+        if (user) {
+          window.location = "/dashboard";
         }
-        catch(error){
-            alert(error.message)
-        }
+      });
+    } catch (error) {
+      alert(error.message);
     }
-    return <div>
+  };
+  return (
+    <div>
       <Signin
-        title = "Login"
-        button = "Login"
-        href = "/register"
-        link = "Register"
-        headerStatement = "Need an account?"
-        emailInput = {emailRef}
-        passwordInput = {passwordRef}
-        btnFunction = {login}
+        title="Login"
+        button="Login"
+        href="/register"
+        link="Register"
+        headerStatement="Need an account?"
+        emailInput={emailRef}
+        passwordInput={passwordRef}
+        btnFunction={login}
       />
-  </div>;
+    </div>
+  );
 }
 
 export default Login;
