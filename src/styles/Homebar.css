@@ -1,0 +1,9 @@
+.home-bar {
+    width: 100vw;
+    height: 80px;
+    background-color: #2D2E2E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 30px 40px rgba(0,0,0,.1);
+  }

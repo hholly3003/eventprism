@@ -4,7 +4,7 @@ import {useState, useEffect, Fragment, useRef} from 'react'
 import {v1} from 'uuid';
 import UserInput from './UserInput';
 import axios from 'axios';
-
+import '../styles/EventsList.css'
 
 function EventsList({name}) {
     const [items, setItems] = useState([]);

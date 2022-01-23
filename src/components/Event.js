@@ -1,4 +1,5 @@
 import React from "react";
+import '../styles/Event.css'
 
 function Event({title, image, date, months, score, lowest_price}) {
     return (

@@ -5,6 +5,7 @@ import styled from "styled-components";
 import Event from "../components/Event";
 import EventsList from "../components/EventsList";
 import HomeBar from "../components/Homebar";
+import '../styles/Dashboard.css'
 // import UserInput from "..components/UserInput";
 
 function Dashboard({ events }) {

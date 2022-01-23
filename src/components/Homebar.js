@@ -1,5 +1,5 @@
 import React from 'react'
-
+import '../styles/Homebar.css'
 function HomeBar() {
     return (
         <div className='home-bar'>
