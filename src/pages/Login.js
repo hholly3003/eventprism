@@ -1,39 +1,45 @@
-import React, { useRef } from 'react';
-import Signin from '../components/Login'
-import { signInWithEmailAndPassword }from 'firebase/auth'
-import { auth } from '../utils/firebase'
+import React, { useRef, useState } from "react";
+import Signin from "../components/Login";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../utils/firebase";
 
 function Login() {
-    const emailRef = useRef()
-    const passwordRef = useRef()
-    
+  const emailRef = useRef();
+  const passwordRef = useRef();
+  const [user, setUser] = useState({});
 
-    const login = async ()=>{
-        try{
-            await signInWithEmailAndPassword(auth, emailRef.current.value, passwordRef.current.value)
-            .then(()=>{
-                if(user){
-                    window.location = "/dashboard"
-                }
-
-            })
+  const login = async () => {
+    // Find out how to limit only for authenticated user who can access dashboard.
+    try {
+      await signInWithEmailAndPassword(
+        auth,
+        emailRef.current.value,
+        passwordRef.current.value
+      ).then(() => {
+        if (user) {
+          window.location = "/";
+        } else {
+          alert.message("Please sign in first");
         }
-        catch(error){
-            alert(error.message)
-        }
+      });
+    } catch (error) {
+      alert(error.message);
     }
-    return <div>
+  };
+  return (
+    <div>
       <Signin
-        title = "Login"
-        button = "Login"
-        href = "/register"
-        link = "Register"
-        headerStatement = "Need an account?"
-        emailInput = {emailRef}
-        passwordInput = {passwordRef}
-        btnFunction = {login}
+        title="Login"
+        button="Login"
+        href="/register"
+        link="Register"
+        headerStatement="Need an account?"
+        emailInput={emailRef}
+        passwordInput={passwordRef}
+        btnFunction={login}
       />
-  </div>;
+    </div>
+  );
 }
 
 export default Login;
