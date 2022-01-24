@@ -17,7 +17,7 @@ function Login() {
         passwordRef.current.value
       ).then(() => {
         if (user) {
-          window.location = "/dashboard";
+          window.location = "/";
         } else {
           alert.message("Please sign in first");
         }
