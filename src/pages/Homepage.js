@@ -1,15 +1,13 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
-import HomeBar from '../components/Homebar';
+import EventsList from "../components/EventsList";
+import HomeBar from "../components/Homebar";
 
 function Homepage() {
   return (
     <div>
-      <HomeBar
-        text="Login"
-        href="/login"
-      />
-
+      <HomeBar text="Login" href="/login" />
+      <EventsList />
     </div>
   );
 }

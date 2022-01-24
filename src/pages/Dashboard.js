@@ -2,10 +2,10 @@ import { onSnapshot, doc } from "firebase/firestore";
 import React, { useState, useEffect } from "react";
 import db, { auth } from "../utils/firebase";
 // import styled from "styled-components";
-import Event from "../components/Event";
+// import Event from "../components/Event";
 import EventsList from "../components/EventsList";
 import HomeBar from "../components/Homebar";
-import '../styles/Dashboard.css'
+import "../styles/Dashboard.css";
 import { signOut } from "firebase/auth";
 // import UserInput from "..components/UserInput";
 
@@ -13,22 +13,20 @@ function Dashboard({ events }) {
   const [user, setUser] = useState({});
   const [filteredEvents, setFilteredEvents] = useState("all");
 
-  const logout = async ()=>{
-    await signOut(auth)
-    window.location = "/"
-  }
-  
+  const logout = async () => {
+    await signOut(auth);
+    window.location = "/";
+  };
+
   //getting the object only of the active user or user who is signed in
   useEffect(() => {
     // Authenticate the user and only user who has signed in can access dashboard
     auth.onAuthStateChanged((currentUser) => {
       if (currentUser.uid) {
         setUser(currentUser.uid);
-      } else if (!currentUser){
-        window.location = "/login"
-      } 
-      
-      else {
+      } else if (!currentUser) {
+        window.location = "/login";
+      } else {
         alert.message("Please sign in");
       }
     });
@@ -47,13 +45,9 @@ function Dashboard({ events }) {
 
   return (
     <div className="dashboard">
-      <HomeBar 
-        text="Logout"
-        href="/"
-      />
+      <HomeBar text="Logout" href="/" />
       <EventsList />
     </div>
-    
   );
 }
 

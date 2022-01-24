@@ -4,7 +4,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Home from "./pages/Homepage";
 import Dashboard from "./pages/Dashboard";
-
+import Aboutpage from "./pages/Aboutpage.js";
 
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/about" element={<Aboutpage />} />
         </Routes>
         {/* <Container></Container> */}
       </div>
