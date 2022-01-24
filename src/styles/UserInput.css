@@ -4,13 +4,24 @@
     align-items: center;
     justify-content: space-between;
   }
+
+  .select-container {
+      width: 150px;
+      height: 30px;
+      background-color: #0079FF;
+  }
+
+  .select {
+      width: 100%;
+      height: 20px;
+  }
   
   .search {
     margin-top: 10px;
     width: 100%;
     background-color: white;
     border-radius: 5px;
-    height: 30px;
+    height: 50px;
     display: flex;
     align-items: center;
     
@@ -19,6 +30,8 @@
   .search input {
     margin-left: 10px;
     width: 100%;
+    height: 100%;
+    height: 200px;
     border: none;
     outline: none;
     background: none;
