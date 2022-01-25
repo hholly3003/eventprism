@@ -1,17 +1,16 @@
-import React from "react";
-import "../styles/Homebar.css";
-
-function HomeBar({ text, href }) {
-  return (
-    <div className="home-bar">
-      <p>EventPrism</p>
-      <div className="links">
-        <p>Home</p>
-        <p>About</p>
-      </div>
-      <a href={href}>{text}</a>
-    </div>
-  );
+import React from 'react'
+import '../styles/Homebar.css'
+function HomeBar() {
+    return (
+        <div className='home-bar'>
+            <p>Event Finder</p>
+            <div className='links'>
+                <p>Home</p>
+                <p>About</p>
+            </div>
+            <p>Logout</p>
+        </div>
+    )
 }
 
-export default HomeBar;
+export default HomeBar

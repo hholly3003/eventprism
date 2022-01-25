@@ -30,7 +30,7 @@ function Register() {
                 })
                 // When there is a user, send to dashboard route
                 if(cred){
-                    window.location = "/dashboard";
+                    window.location = "/";
                 }
             });
         }

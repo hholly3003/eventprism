@@ -1,22 +1,16 @@
 import { onSnapshot, doc } from "firebase/firestore";
 import React, { useState, useEffect } from "react";
 import db, { auth } from "../utils/firebase";
-// import styled from "styled-components";
-// import Event from "../components/Event";
+import styled from "styled-components";
+import Event from "../components/Event";
 import EventsList from "../components/EventsList";
 import HomeBar from "../components/Homebar";
-import "../styles/Dashboard.css";
-import { signOut } from "firebase/auth";
+import '../styles/Dashboard.css'
 // import UserInput from "..components/UserInput";
 
 function Dashboard({ events }) {
   const [user, setUser] = useState({});
   const [filteredEvents, setFilteredEvents] = useState("all");
-
-  const logout = async () => {
-    await signOut(auth);
-    window.location = "/";
-  };
 
   //getting the object only of the active user or user who is signed in
   useEffect(() => {
@@ -24,8 +18,6 @@ function Dashboard({ events }) {
     auth.onAuthStateChanged((currentUser) => {
       if (currentUser.uid) {
         setUser(currentUser.uid);
-      } else if (!currentUser) {
-        window.location = "/login";
       } else {
         alert.message("Please sign in");
       }
@@ -42,11 +34,11 @@ function Dashboard({ events }) {
       [filteredEvents]
     );
   });
-
   return (
     <div className="dashboard">
-      <HomeBar text="Logout" href="/" />
+      <HomeBar />
       <EventsList />
+
     </div>
   );
 }
