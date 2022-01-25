@@ -22,7 +22,6 @@ function UserInput({setType, typeRef, setSearchType, searchType}) {
   }
   
   return (
-  <>    
     <div className="search" id="search_container">
         <select onChange={(e) => {handleChange(e)}}>
           <option>Select Search Type-</option> 
@@ -34,7 +33,7 @@ function UserInput({setType, typeRef, setSearchType, searchType}) {
       <div className="search_btn">
         <button id="search" onClick={() => setType(typeRef.current.value)}>Search</button>
       </div>
-    </>
+    </div>
   );
 }
 
