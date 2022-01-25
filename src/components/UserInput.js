@@ -2,8 +2,8 @@ import React from "react";
 import "../styles/UserInput.css";
 // import Select from "react-select";
 // import "bootstrap/dist/css/bootstrap.min.css";
-// import { doc, setDoc } from "firebase/firestore";
-// import db from "../utils/firebase";
+import { doc, setDoc } from "firebase/firestore";
+import db from "../utils/firebase";
 
 function UserInput({ setType, typeRef, setSearchType, searchType }) {
   function customTheme(theme) {
@@ -24,6 +24,7 @@ function UserInput({ setType, typeRef, setSearchType, searchType }) {
   return (
     <div className="search" id="search_container">
       <select
+        className="select"
         onChange={(e) => {
           handleChange(e);
         }}

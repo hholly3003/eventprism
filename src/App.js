@@ -1,9 +1,11 @@
+import React from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Homepage from "./pages/Homepage";
 import Dashboard from "./pages/Dashboard";
+import Aboutpage from "./pages/Aboutpage";
 import styled from "styled-components";
 
 function App() {
@@ -16,7 +18,8 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/" element={<Dashboard />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/aboutpage" element={<Aboutpage />} />
         </Routes>
       </div>
     </BrowserRouter>

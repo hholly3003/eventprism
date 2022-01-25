@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/Homebar.css'
-function HomeBar() {
+function HomeBar({text, btnFunction}) {
     return (
         <div className='home-bar'>
             <p>Event Finder</p>
@@ -8,7 +8,8 @@ function HomeBar() {
                 <p>Home</p>
                 <p>About</p>
             </div>
-            <p>Logout</p>
+            <p onClick={btnFunction}>{text}</p>
+           
         </div>
     )
 }
