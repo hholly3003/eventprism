@@ -6,16 +6,16 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 // import db from "../utils/firebase";
 
 function UserInput({setType, typeRef, setSearchType, searchType}) {
-  function customTheme(theme) {
-    return {
-      ...theme,
-      colors: {
-        ...theme.colors,
-        primary25: '#7DDF64',
-        primary: '#7DDF64',
-      }
-    }
-  }
+  // function customTheme(theme) {
+  //   return {
+  //     ...theme,
+  //     colors: {
+  //       ...theme.colors,
+  //       primary25: '#7DDF64',
+  //       primary: '#7DDF64',
+  //     }
+  //   }
+  // }
 
   const handleChange= (e) => {
     setSearchType(e.target.value)
