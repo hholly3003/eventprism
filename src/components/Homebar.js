@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/Homebar.css'
-function HomeBar({text, href}) {
+function HomeBar({text, btnFunction}) {
     return (
         <div className='home-bar'>
             <p>Event Finder</p>
@@ -8,7 +8,8 @@ function HomeBar({text, href}) {
                 <p>Home</p>
                 <p>About</p>
             </div>
-            <a href={href}>{text}</a>
+            <p onClick={btnFunction}>{text}</p>
+           
         </div>
     )
 }
