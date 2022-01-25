@@ -36,7 +36,10 @@ function Dashboard({ events }) {
   });
   return (
     <div className="dashboard">
-      <HomeBar />
+      <HomeBar 
+        text = "Logout"
+        href = "/"
+      />
       <EventsList />
 
     </div>

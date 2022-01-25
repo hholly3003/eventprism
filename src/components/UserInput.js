@@ -6,23 +6,22 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 // import db from "../utils/firebase";
 
 function UserInput({setType, typeRef, setSearchType, searchType}) {
-  function customTheme(theme) {
-    return {
-      ...theme,
-      colors: {
-        ...theme.colors,
-        primary25: '#7DDF64',
-        primary: '#7DDF64',
-      }
-    }
-  }
+  // function customTheme(theme) {
+  //   return {
+  //     ...theme,
+  //     colors: {
+  //       ...theme.colors,
+  //       primary25: '#7DDF64',
+  //       primary: '#7DDF64',
+  //     }
+  //   }
+  // }
 
   const handleChange= (e) => {
     setSearchType(e.target.value)
   }
   
   return (
-  <>    
     <div className="search" id="search_container">
         <select onChange={(e) => {handleChange(e)}}>
           <option>Select Search Type-</option> 
@@ -35,9 +34,7 @@ function UserInput({setType, typeRef, setSearchType, searchType}) {
         <button id="search" onClick={() => setType(typeRef.current.value)}>Search</button>
       </div>
     </div>
-  
-  </>
-  )
+  );
 }
 
 export default UserInput;
