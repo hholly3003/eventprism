@@ -1,6 +1,6 @@
 import React from "react";
 import '../styles/Event.css'
-
+import star from '../images/star.png'
 function Event({title, image, date, months, score, lowest_price}) {
     return (
         <div className='events'>
@@ -13,7 +13,7 @@ function Event({title, image, date, months, score, lowest_price}) {
                     <div className='information'>
                         <p id='date'>{`${months[date[1] - 1]} ${date[2]}`}</p>
                         <div className='score'>
-                            <img id = 'img-star' src='./images/star.png' />
+                            <img id = 'img-star' src={star} />
                             <p>{score}</p>
                         </div>
                     </div>

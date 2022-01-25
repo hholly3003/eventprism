@@ -1,21 +1,7 @@
 import React from "react";
 import '../styles/UserInput.css'
-import Select from 'react-select';
-import 'bootstrap/dist/css/bootstrap.min.css'
-// import { doc, setDoc } from "firebase/firestore";
-// import db from "../utils/firebase";
 
 function UserInput({setType, typeRef, setSearchType, searchType}) {
-  // function customTheme(theme) {
-  //   return {
-  //     ...theme,
-  //     colors: {
-  //       ...theme.colors,
-  //       primary25: '#7DDF64',
-  //       primary: '#7DDF64',
-  //     }
-  //   }
-  // }
 
   const handleChange= (e) => {
     setSearchType(e.target.value)

@@ -9,6 +9,7 @@ import "../styles/EventsList.css";
 function EventsList({ name }) {
   const [items, setItems] = useState([]);
   const [type, setType] = useState("");
+  const [searchType, setSearchType] = useState("");
   const typeRef = useRef();
   const client_id = "MjUzNzU2NTF8MTY0MjI5NTUyNi40ODgzNzgz";
   let months = [
@@ -25,13 +26,24 @@ function EventsList({ name }) {
     "Nov",
     "Dec",
   ];
+  let separator = "-";
 
   useEffect(async () => {
     const getEvent = async () => {
+      let response;
       try {
-        const response = await axios.get(
-          `https://api.seatgeek.com/2/events?type=${type}&geoip=true&client_id=${client_id}&per_page=100&format=json`
-        );
+        if (searchType == "type") {
+          const formatedType = type.split(' ').join(separator)
+          response = await axios.get(`https://api.seatgeek.com/2/events?type=${type}&geoip=true&client_id=${client_id}&per_page=100&format=json`)
+      }
+      else if (searchType == "performers"){
+          const formatedType = type.split(' ').join(separator)
+          response = await axios.get(`https://api.seatgeek.com/2/events?performers.slug=${formatedType}&geoip=true&client_id=${client_id}&per_page=100&format=json`)
+      }
+      else {
+          console.log('Something went wrong');
+          response = await axios.get(`https://api.seatgeek.com/2/events?type=${type}&geoip=true&client_id=${client_id}&per_page=100&format=json`)
+      }
         const { events } = response.data;
 
         setItems(events);
@@ -44,7 +56,10 @@ function EventsList({ name }) {
   return (
     <div className="events-list-container">
       <div className="events-list-searchbar">
-        <UserInput setType={setType} typeRef={typeRef} />
+        <UserInput 
+        setType={setType} 
+        typeRef={typeRef} 
+        setSearchType={setSearchType}/>
       </div>
       <div className="events-list-card">
         {items.map((event) => {
@@ -68,11 +83,3 @@ function EventsList({ name }) {
 }
 
 export default EventsList;
-
-// await fetch(`https://api.seatgeek.com/2/events?&venue.state=NY&client_id=MjUzNzU2NTF8MTY0MjI5NTUyNi40ODgzNzgz&per_page=100&format=json`)
-//         .then((response) => response.json())
-//         .then((json) => {
-//         const {events} = json
-//         setItems(events)
-//         }
-//         );
