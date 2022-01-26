@@ -1,6 +1,14 @@
 import React from 'react'
 import '../styles/Homebar.css'
-function HomeBar({text, btnFunction}) {
+import db, { auth } from "../utils/firebase";
+
+function HomeBar({setIsLogged}) {
+    const logout = async ()=>{
+        await auth.signOut();
+        window.location = "/login";
+        setIsLogged(null);
+      }
+
     return (
         <div className='home-bar'>
             <p>Event Finder</p>
@@ -8,7 +16,7 @@ function HomeBar({text, btnFunction}) {
                 <p>Home</p>
                 <p>About</p>
             </div>
-            <p onClick={btnFunction}>{text}</p>
+            <p onClick={logout} id='logout'>Logout</p>
            
         </div>
     )

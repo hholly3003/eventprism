@@ -9,6 +9,11 @@
   box-shadow: 0 30px 40px rgba(0, 0, 0, 0.1);
 }
 
-.home-bar p {
+/* .home-bar p {
   filter: drop-shadow(10px 10px 1px #000);
+} */
+
+#logout{
+  cursor: pointer;
 }
+

@@ -8,8 +8,8 @@ function Homepage() {
   }
   return (
     <div className="homepage-container">
-      <HomeBar text="Login" btnFunction={redirectLogin} />
-      <EventsList />
+      <h1>Welcome</h1>
+      <button onClick={redirectLogin}>Login</button>
     </div>
   );
 }

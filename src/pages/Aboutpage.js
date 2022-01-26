@@ -2,10 +2,12 @@ import React from "react";
 import HomeBar from "../components/Homebar";
 import "../styles/Aboutpage.css";
 
-const Aboutpage = () => {
+const Aboutpage = ({setIsLogged}) => {
   return (
     <div className="about-container">
-      <HomeBar text="Login" href="/login" />
+      <HomeBar 
+      setIsLogged={setIsLogged}
+      />
       <div className="main">
         <h1 className="main-heading">
           We Never Stop Learning from this Journey

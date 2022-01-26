@@ -6,7 +6,6 @@ import { auth } from "../utils/firebase";
 function Login() {
   const emailRef = useRef();
   const passwordRef = useRef();
-  const [user, setUser] = useState({});
 
   const login = async () => {
     // Find out how to limit only for authenticated user who can access dashboard.
@@ -15,7 +14,7 @@ function Login() {
         auth,
         emailRef.current.value,
         passwordRef.current.value
-      ).then(() => {
+      ).then((user) => {
         if (user) {
           window.location = "/dashboard";
         } else {
