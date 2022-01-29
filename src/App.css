@@ -6,7 +6,8 @@
 }
 
 .App {
-  background: linear-gradient(346deg, #000 0%, #fff 100%);
+  /* background: linear-gradient(346deg, #000 0%, #fff 100%); */
+  background-color: white;
   height: 100vh;
   width: 100vw;
   display: flex;

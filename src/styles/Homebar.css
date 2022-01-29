@@ -1,19 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap');
 .home-bar {
   width: 100vw;
   height: 80px;
-  background: linear-gradient(173deg, #000 0%, #fff 100%);
-  color: #f2f2f2;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  box-shadow: 0 30px 40px rgba(0, 0, 0, 0.1);
+  border-bottom: none;
+  margin-top: -40px;
 }
-
-/* .home-bar p {
-  filter: drop-shadow(10px 10px 1px #000);
-} */
-
-#logout{
+#logo {
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+  margin-left: 30px;
   cursor: pointer;
 }
+.links-bar{
+  width: 400px;
+  height: 50px;
+  margin-left: -1000px;
+  display: flex;
+  justify-content: space-evenly;
+}
 
+#logout{
+  margin-right: 40px;
+}
+
+.btn-d {
+  width: 100px;
+  height: 50px;
+  color: white;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  background: none;
+  border: none;
+  border-radius: 25px;
+  transition: all 0.2s ease-in-out;
+}
+.btn-d:hover {
+  background-color: #C52184;
+  color: white;
+  cursor: pointer;
+}

@@ -1,12 +1,13 @@
 import React from "react";
 import Events from "./Event";
 import { useState, useEffect, Fragment, useRef } from "react";
-import { v1 } from "uuid";
+import logor from '../images/image.png'
 import UserInput from "./UserInput";
 import axios from "axios";
 import "../styles/EventsList.css";
+import HomeBar from "./Homebar";
 
-function EventsList({ name }) {
+function EventsList({ setIsLogged }) {
   const [items, setItems] = useState([]);
   const [type, setType] = useState("");
   const [searchType, setSearchType] = useState("");
@@ -26,52 +27,63 @@ function EventsList({ name }) {
     "Nov",
     "Dec",
   ];
-  let separator = "-";
+  const separator = "-";
 
-  useEffect(async () => {
+  useEffect(() => {
     const getEvent = async () => {
-      let response;
       try {
-        if (searchType == "type") {
+        if (searchType === "type") {
+          const response = await axios.get(`https://api.seatgeek.com/2/events?type=${type}&geoip=true&client_id=${client_id}&per_page=10&format=json`);
+          const { events } = response.data;
+          setItems(events);
+          console.log(response.data)
+        } else if (searchType === "performers") {
           const formatedType = type.split(" ").join(separator);
-          response = await axios.get(
-            `https://api.seatgeek.com/2/events?type=${type}&geoip=true&client_id=${client_id}&per_page=100&format=json`
-          );
-        } else if (searchType == "performers") {
-          const formatedType = type.split(" ").join(separator);
-          response = await axios.get(
-            `https://api.seatgeek.com/2/events?performers.slug=${formatedType}&geoip=true&client_id=${client_id}&per_page=100&format=json`
-          );
+          const response = await axios.get(`https://api.seatgeek.com/2/events?performers.slug=${formatedType}&geoip=true&client_id=${client_id}&per_page=10&format=json`);
+          const { events } = response.data;
+          setItems(events);
+          console.log(response.data)
         } else {
           console.log("Something went wrong");
-          response = await axios.get(
-            `https://api.seatgeek.com/2/events?type=${type}&geoip=true&client_id=${client_id}&per_page=100&format=json`
-          );
+          const response = await axios.get(`https://api.seatgeek.com/2/events?geoip=true&client_id=${client_id}&per_page=100&format=json`);
+          const { events } = response.data;
+          setItems(events);
+          console.log(response.data)
         }
-        const { events } = response.data;
-
-        setItems(events);
       } catch (error) {
         console.log(error);
       }
     };
+    console.log("Useeffec")
     return getEvent();
-  }, [type]);
+  }, [searchType, type]);
   return (
     <div className="events-list-container">
       <div className="events-list-searchbar">
+        <div>
+          <HomeBar  
+          setIsLogged={setIsLogged}
+          />
+        </div>
+        <div className="logo-container">
+          <img src={logor} id='logo-event'/>
+        </div>
         <UserInput
           setType={setType}
           typeRef={typeRef}
           setSearchType={setSearchType}
         />
       </div>
+      <p id="events-title">Your Events</p>
       <div className="events-list-card">
-        {items.map((event) => {
+        {
+        items && items.map((event,index) => {
+          // console.log(event);
           const { stats } = event;
           return (
-            <Fragment key={v1()}>
+          
               <Events
+              key={index}
                 title={event.short_title}
                 image={event.performers[0].image}
                 date={event.datetime_local.split("T").shift().split("-")}
@@ -79,8 +91,8 @@ function EventsList({ name }) {
                 score={event.score}
                 lowest_price={stats.lowest_price}
               />
-            </Fragment>
-          );
+          
+          )
         })}
       </div>
     </div>

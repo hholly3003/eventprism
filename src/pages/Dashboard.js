@@ -38,10 +38,8 @@ function Dashboard({setIsLogged}) {
   });
   return (
     <div className="dashboard">
-      <HomeBar 
-        setIsLogged={setIsLogged}
-      />
-      <EventsList />
+      
+      <EventsList setIsLogged={setIsLogged}/>
 
     </div>
   );

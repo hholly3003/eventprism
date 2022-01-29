@@ -1,49 +1,36 @@
 import React from "react";
 import "../styles/UserInput.css";
-// import Select from "react-select";
-// import "bootstrap/dist/css/bootstrap.min.css";
-import { doc, setDoc } from "firebase/firestore";
-import db from "../utils/firebase";
+import searchIcon from '../images/icons8-search-50.png'
 
-function UserInput({ setType, typeRef, setSearchType, searchType }) {
-  function customTheme(theme) {
-    return {
-      ...theme,
-      colors: {
-        ...theme.colors,
-        primary25: "#7DDF64",
-        primary: "#7DDF64",
-      },
-    };
-  }
+
+function UserInput({ setType, typeRef, setSearchType }) {
 
   const handleChange = (e) => {
     setSearchType(e.target.value);
   };
 
   return (
-    <div className="search" id="search_container">
-      <select
-        className="select"
-        onChange={(e) => {
-          handleChange(e);
-        }}
-      >
-        <option>Select Search Type-</option>
-        <option value="type">type</option>
-        <option value="performers">performers</option>
-      </select>
-
-      <input
-        ref={typeRef}
-        id="input"
-        type="text"
-        placeholder="Search Events by Type"
-      />
-      <div className="search_btn">
-        <button id="search" onClick={() => setType(typeRef.current.value)}>
-          Search
-        </button>
+    <div className="search-conatiner">
+      <div className="search">
+        <select
+            className="select"
+            onChange={(e) => {
+              handleChange(e);
+            }}
+          >
+            <option value={null}>Select Type</option>
+            <option value="type">type</option>
+            <option value="performers">performers</option>
+        </select>
+        <input
+          ref={typeRef}
+          className="input"
+          type="text"
+          placeholder="Search Events by Type"
+        />
+        <div className="search_btn">
+          <img src={searchIcon} id="search" onClick={() => setType(typeRef.current.value)}/>
+        </div>
       </div>
     </div>
   );

@@ -28,23 +28,24 @@ function App() {
       <div className="App">
         {/* Only one route to show up at a time */}
         <Routes>
-          <Route path="/" element={<Homepage />}/>
+          <Route path="/" element={<>
+            {!isLogged && <Homepage />}
+            {isLogged && <Navigate to='/dashboard'/>}
+            </>}/>
           <Route path="/login" element={<>
             {!isLogged && <Login />}
             {isLogged && <Navigate to='/dashboard'/>}
             </>} />
-          <Route path="/register" element={<Register />} />
+          <Route path="/register" element={<>
+            {!isLogged && <Register />}
+            {isLogged && <Navigate to='/dashboard'/>}
+            </>} />
           <Route path="/dashboard" element={<>
+            {isLogged && <Dashboard setIsLogged={setIsLogged}/>}
             {!isLogged && <Navigate to='/login'/>}
-            {isLogged && <Dashboard setIsLogged={setIsLogged}
-            // {isLogged && <}
-            />}
             </>} />
           <Route path="/aboutpage" element={<>
-            {!isLogged && <Navigate to='/login'/>}
-            {isLogged && <Aboutpage setIsLogged={setIsLogged}
-            // {isLogged && <}
-            />}
+            {isLogged && <Aboutpage setIsLogged={setIsLogged}/>}
             </>} />
         </Routes>
       </div>
