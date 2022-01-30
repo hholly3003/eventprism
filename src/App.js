@@ -21,7 +21,7 @@ function App() {
       }
     })
     return unSub();
-  }, [isLogged]);
+  }, []);
   return (
     // Main router that allows routes to connect to the app.
     <BrowserRouter>
@@ -30,22 +30,21 @@ function App() {
         <Routes>
           <Route path="/" element={<>
             {!isLogged && <Homepage />}
-            {isLogged && <Navigate to='/dashboard'/>}
+            {isLogged && <Navigate to={'/dashboard' || '/aboutpage'}/>}
             </>}/>
           <Route path="/login" element={<>
-            {!isLogged && <Login />}
             {isLogged && <Navigate to='/dashboard'/>}
+            {!isLogged && <Login />}
             </>} />
           <Route path="/register" element={<>
             {!isLogged && <Register />}
             {isLogged && <Navigate to='/dashboard'/>}
             </>} />
           <Route path="/dashboard" element={<>
-            {isLogged && <Dashboard setIsLogged={setIsLogged}/>}
-            {!isLogged && <Navigate to='/login'/>}
+            {isLogged && <Dashboard setIsLogged={setIsLogged} isLogged={isLogged}/> || isLogged == false && <Navigate to='/login'/>}
             </>} />
           <Route path="/aboutpage" element={<>
-            {isLogged && <Aboutpage setIsLogged={setIsLogged}/>}
+            {isLogged && <Aboutpage setIsLogged={setIsLogged} isLogged={isLogged}/> || isLogged == false && <Navigate to='/login'/>}
             </>} />
         </Routes>
       </div>

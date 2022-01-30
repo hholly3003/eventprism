@@ -1,73 +1,64 @@
 import React from "react";
 import HomeBar from "../components/Homebar";
 import "../styles/Aboutpage.css";
-
+import logoR from '../images/image.png'
 const Aboutpage = ({setIsLogged}) => {
   return (
     <div className="about-container">
-      <HomeBar 
-      setIsLogged={setIsLogged}
-      />
+      <div className="hombe-bar">
+        <HomeBar 
+          setIsLogged={setIsLogged}
+        />
+      </div>
+      <div className="logo-container">
+          <img src={logoR} id='logoAbout'/>
+        </div>
       <div className="main">
-        <h1 className="main-heading">
-          We Never Stop Learning from this Journey
-        </h1>
+        <p className="main-heading">Welcome all to EventPrism.</p>
+        <p className="main-sub-heading">Come dive in with us on our journey to improve user experience.</p>
         <div className="main-points">
           <div className="main-point-title">
-            <h3>Point #1</h3>
+            <p>To begin, let's paint a picture:</p>
           </div>
           <div className="main-point-info">
             <p>
               {" "}
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi
-              tincidunt ornare massa eget egestas purus. Purus sit amet luctus
-              venenatis lectus magna fringilla urna. Tellus id interdum velit
-              laoreet id. Faucibus turpis in eu mi bibendum neque egestas
-              congue. Erat velit scelerisque in dictum non consectetur a. Ornare
-              lectus sit amet est placerat in egestas erat. Integer feugiat
-              scelerisque varius morbi. Lectus nulla at volutpat diam. Nunc
-              pulvinar sapien et ligula ullamcorper. Pellentesque nec nam
-              aliquam sem. Dui accumsan sit amet nulla facilisi morbi tempus
-              iaculis urna. Ac ut consequat semper viverra nam libero justo
-              laoreet sit. Amet nulla facilisi morbi tempus iaculis urna.{" "}
+              You are going out of town or let's say you just simply want to get out of the house and find something to do while you have some free time. 
+              You aren't too familiar with the area or maybe you are but you are curious with what's going on in your area. You go online and see a million 
+              and one event finders, what do you do? with so many options it can become quite overwhelming. Then you stumble across one that catches your 
+              eye. Was it the colors? Was it the name? You can't say but you decided to click on it. What have you found? Why it was none-other than 
+              EventPrism. The event-finder for the people by the people. You skim through it and you find some events near you that you didn't realize was 
+              happening. You click on it, look through the information and decide you want to do it. You see how easy it is to reserve the event and can even 
+              login to save it in case you need to go back to look at the event. Here at EventPrism we believe in a smooth experience, an eye pleasing 
+              oportunity to keep the people in the loop you could say.{" "}
             </p>
           </div>
           <div className="main-point-title">
-            <h3>Point #2</h3>
+            <p>How was EventPrism founded?</p>
           </div>
           <div className="main-point-info">
             <p>
               {" "}
-              Est placerat in egestas erat imperdiet sed euismod nisi porta. Mi
-              eget mauris pharetra et ultrices neque ornare aenean euismod.
-              Montes nascetur ridiculus mus mauris vitae ultricies leo integer
-              malesuada. Sed ullamcorper morbi tincidunt ornare massa eget
-              egestas purus. Porta non pulvinar neque laoreet. Vulputate
-              dignissim suspendisse in est ante in nibh. Turpis massa tincidunt
-              dui ut ornare lectus sit. Vestibulum morbi blandit cursus risus
-              at. Varius morbi enim nunc faucibus a pellentesque sit amet.
-              Libero volutpat sed cras ornare arcu. Elementum nisi quis eleifend
-              quam. Amet mattis vulputate enim nulla aliquet porttitor lacus.
-              Quis ipsum suspendisse ultrices gravida dictum fusce.{" "}
+              Well, a group of wonderfully talented programmers took it upon themselves to endlessly ponder on the questions so many have thought before 
+              them. How can they make it so that people can get what they need as easy as a snap of a finger? After careful research and planning a lightbulb 
+              lit up! What if they made an event finder that was simple and fun to use? Something that anyone could enjoy no matter what age they were.{" "}
             </p>
           </div>
           <div className="main-point-title">
-            <h3>Point #3</h3>
+            <p>Our creators:</p>
           </div>
           <div className="main-point-info">
             <p>
               {" "}
-              Sagittis id consectetur purus ut faucibus. Diam maecenas sed enim
-              ut sem viverra aliquet eget sit. Diam phasellus vestibulum lorem
-              sed. Purus sit amet volutpat consequat mauris nunc. Suscipit
-              tellus mauris a diam maecenas. Nunc id cursus metus aliquam
-              eleifend mi in nulla posuere. Adipiscing elit ut aliquam purus.
-              Libero volutpat sed cras ornare arcu dui vivamus arcu felis. Nec
-              nam aliquam sem et tortor consequat. Id velit ut tortor pretium.
-              Dignissim enim sit amet venenatis.{" "}
+              Holly, Carlos, Isaiah, and Luna are happy to roll up their sleeves to oversee the success of the demand for the people's enjoyment. No matter 
+              the challenge that may arise, we are here at EventPrism are ready to tackle the challenge. Alone we as a society are powerful but together we, 
+              the people, can become an unstoppable force once brought together. {" "}
             </p>
+
           </div>
+        </div>
+        <div className="main-point-title">
+          <p>EventPrism- For the people by the people, Thank you.</p>
         </div>
       </div>
     </div>

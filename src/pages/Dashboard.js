@@ -9,10 +9,10 @@ import '../styles/Dashboard.css'
 import { isLabelWithInternallyDisabledControl } from "@testing-library/user-event/dist/utils";
 // import UserInput from "..components/UserInput";
 
-function Dashboard({setIsLogged}) {
+function Dashboard({setIsLogged, isLogged}) {
   const [user, setUser] = useState({});
   const [filteredEvents, setFilteredEvents] = useState("all");
-  
+  console.log(isLogged);
   //getting the object only of the active user or user who is signed in
   useEffect(() => {
     // Authenticate the user and only user who has signed in can access dashboard
@@ -35,7 +35,7 @@ function Dashboard({setIsLogged}) {
       },
       [filteredEvents]
     );
-  });
+  },[]);
   return (
     <div className="dashboard">
       
