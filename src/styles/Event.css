@@ -4,7 +4,8 @@
   margin: 20px;
   display: flex;
   flex-direction: column;
-  
+  color: black;
+  cursor: pointer;
 }
 .events:hover .image_event{
   transform: scale(1.1);
@@ -14,9 +15,7 @@
 .img-container {
   width: 100%;
   height: 192px;
-  background-color: burlywood;
   overflow: hidden;
-  
   border-radius: 15px;
 }
 
@@ -26,9 +25,6 @@
   border-radius: 15px;
   transition: all 0.3s ease-in-out !important;
 }
-/* #image_event:hover {
-  transform: scale(1.5);
-} */
 
 #title {
   font-family: "Karla", sans-serif;
@@ -37,6 +33,7 @@
   margin-top: 6px;
   margin-left: 5px;
   padding: 0px 0px 2px 5px;
+  color: black;
 }
 
 .content_event {
@@ -46,7 +43,8 @@
   flex-direction: column;
   font-family: "Karla", sans-serif;
   font-size: 18px;
-  background-color: white
+  background-color: white;
+  color:black
 }
 
 .information {
@@ -57,11 +55,12 @@
   margin-bottom: 15px;
   margin-top: 5px;
   padding: 2px 0px 2px 5px;
-  
+  color: black;
 }
 
 #date {
   margin-left: 5px;
+  color: black;
 }
 .score{
   width: 10%;
@@ -69,6 +68,10 @@
   font-size: medium;
   gap: 5px;
   margin-right: 25px;
+  color: black;
+}
+.score p{
+  color: black;
 }
 #star {
   height: 18px;

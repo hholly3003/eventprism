@@ -7,6 +7,7 @@ import Homepage from "./pages/Homepage";
 import Dashboard from "./pages/Dashboard";
 import Aboutpage from "./pages/Aboutpage";
 import { auth } from "./utils/firebase";
+import EventInfo from "./pages/EventInfo";
 
 function App() {
   const [isLogged, setIsLogged] = useState(null)
@@ -46,6 +47,9 @@ function App() {
           <Route path="/aboutpage" element={<>
             {isLogged && <Aboutpage setIsLogged={setIsLogged} isLogged={isLogged}/> || isLogged == false && <Navigate to='/login'/>}
             </>} />
+          <Route path="/eventinfo" element={<>
+            {isLogged && <EventInfo/> || isLogged == false && <Navigate to='/login'/>}
+            </>}/>
         </Routes>
       </div>
     </BrowserRouter>

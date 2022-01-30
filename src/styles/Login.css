@@ -3,10 +3,21 @@
   width: 100vw;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-image: url("../images/background.png");
   background-color: rgba(0,0,0,0.5);
+}
+.logo-container {
+  width: 300px;
+  height: 400px;
+}
+
+#logo-login {
+  width: 100%;
+  height: 100%;
+  margin-top: -200px;
 }
 
 .login-container {
@@ -19,6 +30,7 @@
   border: 1px solid gray;
   background-color: rgba(255, 253, 253, 0.05);
   box-shadow: 0px 15px 20px -6px rgba(82, 82, 82, 0.75);
+  margin-top: -200px;
 }
 
 .login-email,
@@ -28,6 +40,7 @@
   width: 70%;
   border: none;
   font-size: 16px;
+  border-radius: 15px;
 }
 
 .login-email:focus,
@@ -44,35 +57,45 @@
   margin-bottom: 50px;
   color: #C52184;
   font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 50px;
   /*font-weight: bold; */
 }
 
 .login-button {
-  margin-top: 40px;
+  margin-top: 30pxpx;
   margin-bottom: 20px;
   padding: 20px;
   width: 100%;
   border: none;
-  background-color: hsl(235, 24%, 19%);
+  background-color: #C52184;
   color: white;
   font-family: 'Barlow Semi Condensed', sans-serif;
   font-size: 1.3rem;
   font-weight: 800;
   cursor: pointer;
-  border-radius: 2px;
+  border-radius: 16px;
+  transition: all 0.2s ease-in-out;
+}
+
+.login-button:hover {
+  transform: scale(1.1);
 }
 
 p{
   color: white;
   font-family: 'Barlow Semi Condensed', sans-serif;
-  font-size: 16px;
+  font-size: 25px;
 }
 
 a {
   text-decoration: none;
   color: #00b300;
   font-family: 'Barlow Semi Condensed', sans-serif;
-  font-size: 16px;
+  font-size: 25px;
+  transition: all 0.1s ease-in-out;
+}
+a:hover {
+  color:#C52184;
 }
 
 .links {

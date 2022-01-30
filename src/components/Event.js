@@ -2,6 +2,10 @@ import React from "react";
 import "../styles/Event.css";
 import star from "../images/star.png";
 function Event({ title, image, date, months, score, lowest_price }) {
+  const redirectInfo = () => {
+    window.location = "/eventinfo"
+  }
+
   const checkPrice = (lowest_price) => {
     let variable = "";
     if(lowest_price == null) {
@@ -17,7 +21,7 @@ function Event({ title, image, date, months, score, lowest_price }) {
   score = score * 10;
   score = score.toFixed(1);
   return (
-    <div className="events">
+    <div className="events" onClick={redirectInfo}>
       <div className="img-container">
         <img className="image_event" src={image} />
       </div>
