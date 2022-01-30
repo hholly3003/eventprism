@@ -3,7 +3,7 @@ import Homebar from './Homebar'
 import '../styles/EventInfoComponent.css'
 import undconst from '../images/giphy.gif'
 function EventInfo() {
-  return <div className='eventinfo-teo'>
+  return <div className='eventinfo-two'>
     <div className='homebar-info'>
       <Homebar />
     </div>

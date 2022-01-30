@@ -36,9 +36,10 @@
    justify-content: space-between;
    align-items: center;
    background-color: none;
+   background-color: aqua;
 }
 
-.img-container img{
+.img-container-two img{
     display: block; 
     width: 100%;
     height: 100%;
