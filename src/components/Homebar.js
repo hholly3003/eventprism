@@ -18,17 +18,20 @@ function HomeBar({setIsLogged}) {
 
     return (
         <div className='home-bar'>
-            <div>
-                <img src={logo} id="logo" onClick={redirectDashboard}/>
-            </div>
-            <div className='links-bar'>
-                <div className='links-bar-left'>
-                    <button className='btn-d' onClick={redirectDashboard}>Home</button>
-                    <button className='btn-d' onClick={redirectAbout}>About</button>
+            <div className='main-container'>
+                <div>
+                    <img src={logo} id="logo" onClick={redirectDashboard}/>
                 </div>
-                <button onClick={logout} className='btn-d' id='logout'>Logout</button>
+                <div className='links-bar'>
+                    <div className='links-bar-left'>
+                        <button className='btn-d' onClick={redirectDashboard}>Home</button>
+                        <button className='btn-d' onClick={redirectAbout}>About</button>
+                    </div>
+                </div>
             </div>
-           
+            <div className='button-container'>
+                    <button onClick={logout} className='btn-d' id='logout'>Logout</button>
+            </div>
         </div>
     )
 }
