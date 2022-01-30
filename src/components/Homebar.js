@@ -22,10 +22,12 @@ function HomeBar({setIsLogged}) {
                 <img src={logo} id="logo" onClick={redirectDashboard}/>
             </div>
             <div className='links-bar'>
-                <button className='btn-d' onClick={redirectDashboard}>Home</button>
-                <button className='btn-d' onClick={redirectAbout}>About</button>
+                <div className='links-bar-left'>
+                    <button className='btn-d' onClick={redirectDashboard}>Home</button>
+                    <button className='btn-d' onClick={redirectAbout}>About</button>
+                </div>
+                <button onClick={logout} className='btn-d' id='logout'>Logout</button>
             </div>
-            <button onClick={logout} className='btn-d' id='logout'>Logout</button>
            
         </div>
     )

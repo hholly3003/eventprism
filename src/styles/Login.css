@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap');
 .login {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url("../images/background.png");
 }
 
 .login-container {
@@ -11,7 +13,6 @@
   flex-direction: column;
   align-items: center;
   width: 500px;
-  /* background-color: aliceblue; */
   border-radius: 5px;
   padding: 40px;
   border: 1px solid gray;
@@ -22,7 +23,7 @@
 .login-password {
   margin-bottom: 50px;
   padding: 20px;
-  width: 50%;
+  width: 70%;
   border: none;
   font-size: 16px;
 }
@@ -30,7 +31,7 @@
 .login-email:focus,
 .login-password:focus {
   width: 90%;
-  border-bottom: 3px solid #753188c2;
+  border-bottom: 3px solid #C52184;
   border-width: 50%;
   outline: none;
   transition: width 0.1s;
@@ -39,7 +40,9 @@
 
 .login-heading {
   margin-bottom: 50px;
-  color: #753188;
+  color: #C52184;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  /*font-weight: bold; */
 }
 
 .login-button {
@@ -50,15 +53,24 @@
   border: none;
   background-color: hsl(235, 24%, 19%);
   color: white;
+  font-family: 'Barlow Semi Condensed', sans-serif;
   font-size: 1.3rem;
   font-weight: 800;
   cursor: pointer;
   border-radius: 2px;
 }
 
+p{
+  color: white;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 16px;
+}
+
 a {
   text-decoration: none;
   color: #00b300;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 16px;
 }
 
 .links {

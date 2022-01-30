@@ -3,7 +3,7 @@
   width: 100vw;
   height: 80px;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   border-bottom: none;
 }
@@ -14,16 +14,22 @@
   margin-left: 30px;
   cursor: pointer;
 }
+
 .links-bar{
   width: 400px;
   height: 50px;
-  margin-left: -1000px;
+  /* margin-left: -1000px; */
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+}
+
+.links-bar-left{
+  display: flex;
 }
 
 #logout{
   margin-right: 40px;
+  margin-left: 700px;
 }
 
 .btn-d {
