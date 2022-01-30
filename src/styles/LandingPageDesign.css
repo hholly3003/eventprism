@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.homepage-container {
+    background-image: linear-gradient(to top, #021029 0%, #c25c4a 50%,#688b9b 100%);
+    width: 100%;
+    height: 100vh;
+}
+
+#landingBGDesign img {
+    position: absolute;
+    top: 212.5px;
+    left: -5px;
+    height: 480px;
+    width: 1525px;
+}
+
+#logo-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -100px;
+    left: 520px;
+    height: 800px;
+    transform: rotate(90deg);
+}
+
+@keyframes fade-inout {
+    0%{ opacity: 1;}
+    100%{ opacity: 0;}
+}
+
+#fade-in-fade-out {
+    animation: fade-inout 4s infinite alternate;
+    display: flex;
+    position: absolute;
+    top: 450px;
+    left: 640px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    height: 40px;
+    width: 300px;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 20px;
+    background-image: linear-gradient(to top, #021029 0%, #c25c4a 50%,#688b9b 100%);
+    /* background-color: transparent; */
+    cursor: pointer;
+}
