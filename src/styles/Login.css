@@ -10,7 +10,7 @@
   background-color: rgba(0,0,0,0.5);
 }
 .subcontainer-login {
-  height: 1000px;
+  height: 850px;
   width: 700px;
   display: flex;
   flex-direction: column;
