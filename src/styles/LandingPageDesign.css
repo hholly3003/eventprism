@@ -8,23 +8,47 @@
     background-image: linear-gradient(to top, #021029 0%, #c25c4a 50%,#688b9b 100%);
     width: 100%;
     height: 100vh;
+    overflow-x: hidden;
 }
 
-#landingBGDesign img {
-    height: 800px;
+.sub-container-landing{
     width: 100%;
-    margin-top: 200px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+
+}
+.logo-btn-conatainer{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#logo-image {
+.logo-container-landing{
+    height: 300px;
+    width: 800px;
+    
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: -100px;
-    left: 520px;
-    height: 800px;
-    transform: rotate(90deg);
+}
+
+#logo-image-landing {
+    height: 100%;
+    width: 100%;
+}
+
+.login-btn-landing{
+    width: 320px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @keyframes fade-inout {
@@ -35,7 +59,7 @@
 #fade-in-fade-out {
     animation: fade-inout 4s infinite alternate;
     display: flex;
-    position: absolute;
+    /* position: absolute; */
     top: 450px;
     left: 640px;
     justify-content: center;
@@ -49,4 +73,14 @@
     background-image: linear-gradient(to top, #021029 0%, #c25c4a 50%,#688b9b 100%);
     /* background-color: transparent; */
     cursor: pointer;
+}
+
+.landingBGDesign{
+    width: 100%;
+    height: 60%;
+    background-image: url('../images/Landing-Image.png');
+}
+#people-img{
+    height: 100%;
+    width: 100%;
 }
