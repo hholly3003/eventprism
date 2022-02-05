@@ -5,7 +5,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -200px;
 }
 
 /* .select-container {
@@ -51,7 +50,7 @@
   display: flex;
   align-items: center;
   border-radius: 4px;
-  height: 25px;
+  /* height: 25px; */
   
 }
 

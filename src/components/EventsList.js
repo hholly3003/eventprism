@@ -60,19 +60,23 @@ function EventsList({ setIsLogged }) {
   return (
     <div className="events-list-container">
       <div className="events-list-searchbar">
-        <div>
+        <div className="homebar-eventlist">
           <HomeBar  
           setIsLogged={setIsLogged}
           />
         </div>
-        <div className="logo-container">
-          <img src={logor} id='logo-event'/>
+        <div className="top-container">
+          <div className="logo-eventlist-container">
+            <img src={logor} id='logo-eventlist'/>
+          </div>
+          <div className="inputbar-eventlist">
+            <UserInput
+            setType={setType}
+            typeRef={typeRef}
+            setSearchType={setSearchType}
+            />
+          </div>
         </div>
-        <UserInput
-          setType={setType}
-          typeRef={typeRef}
-          setSearchType={setSearchType}
-        />
       </div>
       <p id="events-title">Your Events</p>
       <div className="events-list-card">
