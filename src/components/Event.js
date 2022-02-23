@@ -15,7 +15,6 @@ function Event({ title, image, date, months, score, lowest_price, event_id }) {
       variable = `Lowest $${lowest_price}`
       return variable;
     }
-    return null;
   }
 
   score = score * 10;

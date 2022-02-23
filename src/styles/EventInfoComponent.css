@@ -40,11 +40,46 @@
     height: 100%;
 }
 
+/*--------------------BEGINNING INFORMATION DIVS------------------*/
 .information-container{
     height: 45%;
     width: 90%;
     background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
+
+.title-info-component{
+
+}
+
+.date-time-rating-info-component{
+    display: flex;
+    justify-content: space-between;
+}
+
+.date-time-info-component{
+
+}
+
+.rating-info-component{
+
+}
+
+.venue-info-component{
+
+}
+
+.price-info-component{
+
+}
+
+.link-info-component{
+
+}
+
+/*---------------------ENDING INFORMATION DIVS--------------------*/
 
 .google-map-container{
     height: 95%;
