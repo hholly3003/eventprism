@@ -47,7 +47,7 @@ function App() {
           <Route path="/aboutpage" element={<>
             {isLogged && <Aboutpage setIsLogged={setIsLogged} isLogged={isLogged}/> || isLogged == false && <Navigate to='/login'/>}
             </>} />
-          <Route path="/eventinfo" element={<>
+          <Route path="/eventinfo/:id" element={<>
             {isLogged && <EventInfo/> || isLogged == false && <Navigate to='/login'/>}
             </>}/>
         </Routes>

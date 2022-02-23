@@ -94,6 +94,7 @@ function EventsList({ setIsLogged }) {
                 months={months}
                 score={event.score}
                 lowest_price={stats.lowest_price}
+                event_id={event.id}
               />
           
           )
