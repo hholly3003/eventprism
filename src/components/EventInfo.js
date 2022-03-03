@@ -1,6 +1,7 @@
 import React, {useState, useEffect}from 'react';
 import { useParams } from 'react-router-dom';
-import Homebar from './Homebar'
+import Homebar from './Homebar';
+import Map from './Map';
 import '../styles/EventInfoComponent.css'
 import axios from 'axios';
 
@@ -84,7 +85,7 @@ function EventInfo() {
     return imgOrUrl;
   }
   const getAddress = (n) => {
-    let adr = ''
+    let adr = '';
     if(info.venue){
       if(n == 1){
         adr = info.venue.address;
@@ -93,6 +94,23 @@ function EventInfo() {
       }
     }
     return adr;
+  }
+  const getLatOrLng = (n) => {
+    let latOrlng = 0;
+    if(info.venue){
+      if(n == 'lat'){
+        latOrlng = info.venue.location.lat;
+      } else if(n == 'lng'){
+        latOrlng = info.venue.location.lon;
+      }
+    }
+    return latOrlng;
+  }
+
+  const location = {
+    address: `${getAddress(1)}, ${getAddress(2)}`,
+    lat: getLatOrLng('lat'),
+    lng: getLatOrLng('lng'),
   }
 
   return <div className='eventinfo-component'>
@@ -136,7 +154,7 @@ function EventInfo() {
         
       </div>
       <div className='google-map-container'>
-        <h1>Google Maps</h1>
+        <Map location={location} zoomLevel={17}/>
         </div>
     </div>
   </div>;
