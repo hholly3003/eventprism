@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import Homebar from './Homebar';
 import Map from './Map';
 import '../styles/EventInfoComponent.css'
+import star from '../images/star.png'
 import axios from 'axios';
 
 function EventInfo() {
@@ -56,7 +57,7 @@ function EventInfo() {
     if(time[0] >= 12){
       time = `${hours[time[0] - 1] - 12}:${time[1]} pm`;
     } else {
-      time = `${hours[time[0] - 1] - 12}: ${time[1]}`;
+      time = `${hours[time[0] - 1]}:${time[1]} am`;
     }
     return time;
   }
@@ -68,7 +69,7 @@ function EventInfo() {
         variable = `No Price Avalible`
         return variable;
       } else {
-        variable = `Lowest $${info.stats.lowest_price}`
+        variable = `$${info.stats.lowest_price}`
         return variable;
       }
     }
@@ -129,18 +130,18 @@ function EventInfo() {
 
           <div className='date-time-rating-info-component'>
             <div className='date-time-info-component'>
+              <p>Date and Tiem:</p>
               <p>{getDate()}</p>
               <p>{getTime()}</p>
             </div>
             <div className='rating-info-component'>
+              <img id='star-eventinfo' src={star}/>
               <p>{info.score * 10}</p>
             </div>
           </div>
         
           <div className='venue-info-component'>
-            <p>Venue:</p>
-            <p>{getAddress(1)}</p>
-            <p>{getAddress(2)}</p>
+            <p >{`Venue: ${getAddress(1)} ${getAddress(2)}`} </p>
           </div>
 
           <div className='price-info-component'>
@@ -148,7 +149,7 @@ function EventInfo() {
           </div>
 
           <div className='link-info-component'>
-            <a>{getImageOrUrl(2)}</a>
+            <a href={getImageOrUrl(2)}>{getImageOrUrl(2)}</a>
           </div>
         </div>
         
