@@ -19,24 +19,59 @@
   }
   
   .pin-icon {
-    font-size: 2rem;
+    font-size: 8rem;
   }
   
   .pin-text {
     font-size: 1.3em;
     color: black;
+    font-weight: bolder;
   }
   
-  @media screen and (min-width: 799px) {
+  @media only screen and (max-width: 500px) {
+      .google-map {
+        width: 400px;
+        height: 450px;
+      }
+      
+      .pin {
+        display: flex;
+        align-items: center;
+        width: 100px;
+        color: #FF1B1C;
+      }
+      
+      .pin-icon {
+        font-size: 8rem;
+      }
+      
+      .pin-text {
+        font-size: 1.3em;
+        color: black;
+        font-weight: bolder;
+      }
+  }
+
+  @media only screen and (max-width: 400px) {
     .google-map {
-      height: 80vh;
-      border-radius: 20px;
+      width: 360px;
+      height: 320px;
     }
+    
     .pin {
-      width: 7vw;
+      display: flex;
+      align-items: center;
+      width: 100px;
+      color: #FF1B1C;
     }
-  
+    
     .pin-icon {
-      font-size: 10vw;
+      font-size: 8rem;
     }
-  }
+    
+    .pin-text {
+      font-size: 1.3em;
+      color: black;
+      font-weight: bolder;
+    }
+}

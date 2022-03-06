@@ -78,8 +78,11 @@ function EventsList({ setIsLogged }) {
           </div>
         </div>
       </div>
-      <p id="events-title">Your Events</p>
+      
       <div className="events-list-card">
+        <div className="title-eventlist">
+          <p id="events-title">Your Events</p>
+        </div>
         {
         items && items.map((event,index) => {
           // console.log(event);

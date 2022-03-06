@@ -53,20 +53,270 @@
   display: flex;
   justify-content: center;
 }
-#events-title {
-  font-family: 'Barlow Semi Condensed', sans-serif;
-  font-size: 45px;
-  font-weight: bold;
-  margin-right: 1050px;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  color: black;
-}
+
 
 .events-list-card {
-  width: 80%;
+  width: 80vw;
   height: 100vh;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+}
+
+.title-eventlist{
+  width: 90vw;
+  height: 7vh;
+  display: flex;
+  flex-shrink: 2;
+}
+
+#events-title {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 45px;
+  font-weight: bold;
+  color: black;
+}
+
+@media only screen and (max-width: 500px){
+  .events-list-container {
+    height: 100%;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .events-list-searchbar {
+    height: 350px;
+    width: 500px;
+    top: 40px;
+    box-shadow: 0 30px 40px rgba(0,0,0,.1);
+    object-fit:scale-down;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('../images/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .homebar-eventlist{
+    width: 100%;
+    height: 10%;
+  }
+  
+  
+  .top-container {
+    height: 85%;
+    width: 60%;
+    display: flex;flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+    margin-top: -100px;
+  }
+
+  .logo-eventlist-container{
+    width: 300px;
+    height: 200px;
+  }
+  
+  #logo-eventlist{
+    width: 100%;
+    height: 100%;
+    margin-bottom: -100px;
+  }
+  
+  .inputbar-eventlist{
+    display: flex;
+    justify-content: center;
+  }
+  
+  
+  
+  .events-list-card {
+    width: 80vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  
+  .title-eventlist{
+    width: 90vw;
+    height: 7vh;
+    display: flex;
+    flex-shrink: 2;
+  }
+  
+  #events-title {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 45px;
+    font-weight: bold;
+    color: black;
+  }
+}
+
+@media only screen and (max-width: 400px){
+  .events-list-container {
+    height: 100%;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .events-list-searchbar {
+    height: 350px;
+    width: 500px;
+    top: 40px;
+    box-shadow: 0 30px 40px rgba(0,0,0,.1);
+    object-fit:scale-down;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('../images/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .homebar-eventlist{
+    width: 100%;
+    height: 10%;
+    margin-left: 120px;
+  }
+  
+  
+  .top-container {
+    height: 85%;
+    width: 60%;
+    display: flex;flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+    margin-top: -100px;
+  }
+
+  .logo-eventlist-container{
+    width: 250px;
+    height: 150px;
+  }
+  
+  #logo-eventlist{
+    width: 100%;
+    height: 100%;
+    margin-bottom: -100px;
+  }
+  
+  .inputbar-eventlist{
+    display: flex;
+    justify-content: center;
+  }
+  
+  
+  
+  .events-list-card {
+    width: 80vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  
+  .title-eventlist{
+    width: 90vw;
+    height: 7vh;
+    display: flex;
+    flex-shrink: 2;
+  }
+  
+  #events-title {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 45px;
+    font-weight: bold;
+    color: black;
+  }
+}
+
+@media only screen and (max-width: 300px){
+  .events-list-container {
+    height: 100%;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .events-list-searchbar {
+    height: 350px;
+    width: 300px;
+    top: 40px;
+    box-shadow: 0 30px 40px rgba(0,0,0,.1);
+    object-fit:scale-down;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('../images/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .homebar-eventlist{
+    width: 300px;
+    height: 45px;
+    margin-right: 120px;
+  }
+  
+  
+  .top-container {
+    height: 85%;
+    width: 300px;
+    display: flex;flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+    margin-top: -100px;
+  }
+
+  .logo-eventlist-container{
+    width: 200px;
+    height: 100px;
+  }
+  
+  #logo-eventlist{
+    width: 100%;
+    height: 100%;
+    margin-bottom: -100px;
+  }
+  
+  .inputbar-eventlist{
+    width: 200px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .events-list-card {
+    width: 300px;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  
+  .title-eventlist{
+    width: 90vw;
+    height: 7vh;
+    display: flex;
+    flex-shrink: 2;
+  }
+  
+  #events-title {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 45px;
+    font-weight: bold;
+    color: black;
+  }
 }

@@ -80,3 +80,240 @@
     height: 60%;
     background-image: url('../images/Landing-Image.png');
 }
+
+@media only screen and (max-width: 500px){
+    .homepage-container {
+        background-image: linear-gradient(to top, #021029 0%, #c25c4a 50%,#688b9b 100%);
+        width: 500px;
+        height: 100vh;
+        overflow-x: hidden;
+    }
+    
+    .sub-container-landing{
+        width: 500px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        
+    
+    }
+    .logo-btn-conatainer{
+        height: 40%;
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .logo-container-landing{
+        height: 200px;
+        width: 400px;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #logo-image-landing {
+        height: 100%;
+        width: 100%;
+    }
+    
+    .login-btn-landing{
+        width: 350px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    @keyframes fade-inout {
+        0%{ opacity: 1;}
+        100%{ opacity: 0;}
+    }
+    
+    #fade-in-fade-out {
+        animation: fade-inout 4s infinite alternate;
+        display: flex;
+        /* position: absolute; */
+        top: 450px;
+        left:500px;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        height: 40px;
+        width: 300px;
+        font-size: 17px;
+        font-weight: bold;
+        border-radius: 20px;
+        background-image: linear-gradient(to top, #021029 0%, #c25c4a 50%,#688b9b 100%);
+        /* background-color: transparent; */
+        cursor: pointer;
+    }
+    
+    .landingBGDesign{
+        width: 500px;
+        height: 600px;
+        background-image: url('../images/Landing-Image.png');
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .homepage-container {
+        background-image: linear-gradient(to top, #021029 0%, #c25c4a 50%,#688b9b 100%);
+        width: 400px;
+        height: 100vh;
+        overflow-x: hidden;
+    }
+    
+    .sub-container-landing{
+        width: 400px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        
+    
+    }
+    .logo-btn-conatainer{
+        height: 40%;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .logo-container-landing{
+        height: 200px;
+        width: 350px;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #logo-image-landing {
+        height: 100%;
+        width: 100%;
+    }
+    
+    .login-btn-landing{
+        width: 350px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    @keyframes fade-inout {
+        0%{ opacity: 1;}
+        100%{ opacity: 0;}
+    }
+    
+    #fade-in-fade-out {
+        animation: fade-inout 4s infinite alternate;
+        display: flex;
+        /* position: absolute; */
+        top: 450px;
+        left: 500px;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        height: 40px;
+        width: 300px;
+        font-size: 17px;
+        font-weight: bold;
+        border-radius: 20px;
+        background-image: linear-gradient(to top, #021029 0%, #c25c4a 50%,#688b9b 100%);
+        /* background-color: transparent; */
+        cursor: pointer;
+    }
+    
+    .landingBGDesign{
+        width: 400px;
+        height: 600px;
+        background-image: url('../images/Landing-Image.png');
+    }
+}
+
+@media only screen and (max-width: 300px){
+    .homepage-container {
+        background-image: linear-gradient(to top, #021029 0%, #c25c4a 50%,#688b9b 100%);
+        width: 300px;
+        height: 100vh;
+        overflow-x: hidden;
+    }
+    
+    .sub-container-landing{
+        width: 300px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        
+    
+    }
+    .logo-btn-conatainer{
+        height: 40%;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .logo-container-landing{
+        height: 150px;
+        width: 250px;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #logo-image-landing {
+        height: 100%;
+        width: 100%;
+    }
+    
+    .login-btn-landing{
+        width: 250px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    @keyframes fade-inout {
+        0%{ opacity: 1;}
+        100%{ opacity: 0;}
+    }
+    
+    #fade-in-fade-out {
+        animation: fade-inout 4s infinite alternate;
+        display: flex;
+        /* position: absolute; */
+        top: 450px;
+        left: 300px;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        height: 40px;
+        width: 300px;
+        font-size: 17px;
+        font-weight: bold;
+        border-radius: 20px;
+        background-image: linear-gradient(to top, #021029 0%, #c25c4a 50%,#688b9b 100%);
+        /* background-color: transparent; */
+        cursor: pointer;
+    }
+    
+    .landingBGDesign{
+        width: 300px;
+        height: 500px;
+        background-image: url('../images/Landing-Image.png');
+    }
+}

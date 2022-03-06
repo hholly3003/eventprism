@@ -23,10 +23,8 @@ function HomeBar({setIsLogged}) {
                     <img src={logo} id="logo" onClick={redirectDashboard}/>
                 </div>
                 <div className='links-bar'>
-                    <div className='links-bar-left'>
-                        <button className='btn-d' onClick={redirectDashboard}>Home</button>
-                        <button className='btn-d' onClick={redirectAbout}>About</button>
-                    </div>
+                    <button className='btn-d' onClick={redirectDashboard}>Home</button>
+                    <button className='btn-d' onClick={redirectAbout}>About</button>
                 </div>
             </div>
             <div className='button-container'>

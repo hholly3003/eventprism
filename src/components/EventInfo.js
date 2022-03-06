@@ -130,7 +130,7 @@ function EventInfo() {
 
           <div className='date-time-rating-info-component'>
             <div className='date-time-info-component'>
-              <p>Date and Tiem:</p>
+              <p>Date and Time:</p>
               <p>{getDate()}</p>
               <p>{getTime()}</p>
             </div>
